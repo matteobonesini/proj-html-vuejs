@@ -78,5 +78,5 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/scss/footer.scss'
+@use '../assets/scss/partials/footer.scss'
 </style>
