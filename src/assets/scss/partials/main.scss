@@ -1,3 +1,5 @@
+@use './variables.scss' as *;
+
 /* MAIN COMPONENT */
 main {
 
@@ -20,10 +22,11 @@ main {
                 position: relative;
 
                 .control {
-                    background-color: #A691B2;
-                    width: 20px;
-                    height: 40px;
-                    line-height: 40px;
+                    background-color: #a691b29f;
+                    color: white;
+                    width: 40px;
+                    height: 80px;
+                    line-height: 80px;
                     text-align: center;
                     position: absolute;
                     top: 50%;
@@ -72,6 +75,64 @@ main {
                 }
                 &:nth-child(2) {
                     margin-left: 25px;
+                }
+            }
+        }
+    }
+
+    section.products-preview {
+        
+        .left {
+            width: 30%;
+        }
+
+        .right {
+            width: 70%;
+            
+            .carousel {
+                position: relative;
+
+                .control {
+                    background-color: #a691b29f;
+                    color: white;
+                    width: 40px;
+                    height: 80px;
+                    line-height: 80px;
+                    text-align: center;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    &.prev {
+                        left: 0;
+                    }
+
+                    &.next {
+                        right: 0;
+                    }
+                }
+
+                .images {
+
+                    .image {
+                        width: calc(25% - 12px);
+                        vertical-align: top;
+
+                        &:not(:nth-child(4n)) {
+                            margin-right: 16px;
+                        }
+                        img {
+                            width: 100%;
+                        }
+
+                        h5 {
+                            margin-top: 10px;
+                        }
+
+                        .price {
+                            color: $primary-color;
+                        }
+                    }
                 }
             }
         }
