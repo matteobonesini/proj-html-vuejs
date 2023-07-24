@@ -26,12 +26,12 @@ export default {
 
             <div class="navbar">
                 <ul>
-                    <li v-for="(link, i) in navbarLink" :key="i" class="d-inline-block mx-2" :class="{
+                    <li v-for="(link, i) in navbarLink" :key="i" class="d-inline-block mx-3" :class="{
                         active: i == 0
                     }">
                         <a class="text-decoration-none text-uppercase" href="#">{{ link }}</a>
                     </li>
-                    <li class="d-inline-block mx-2">
+                    <li class="d-inline-block mx-3">
                         <a class="text-decoration-none text-uppercase" href="#">
                             <i class="fa-solid fa-cart-shopping"></i>
                         </a>

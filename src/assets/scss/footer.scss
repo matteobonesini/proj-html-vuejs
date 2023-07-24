@@ -1,0 +1,49 @@
+@use '../scss/variables.scss' as *;
+
+/* FOOTER */
+footer {
+
+    .footer-left {
+
+        .logo {
+            height: 60px;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        nav {
+            color: $primary-color;
+            margin: 35px 0 80px;
+
+            .counter {
+                background-color: $secondary-color;
+                color: $primary-color;
+                padding: 3px 10px;
+                border-radius: 99px;
+                margin-left: 5px;
+            }
+        }
+        .copyright {
+            font-size: 0.6rem;
+        }
+    }
+
+    .footer-right {
+
+        input {
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid rgb(209, 208, 208);
+            margin-right: 15px;
+            padding: 0 10px;
+            width: 40%;
+        }
+
+        nav {
+            color: $primary-color;
+        }
+    }
+
+}
