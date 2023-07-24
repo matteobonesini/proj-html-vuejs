@@ -1,2 +1,27 @@
+@use '../scss/variables.scss' as *;
 // Import all of Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
+
+.subtitle {
+    color: $text-color;
+    font-size: 0.75rem;
+}
+
+.title {
+    color: $primary-color;
+}
+
+button {
+    height: 50px;
+    border: 0;
+    border-radius: 5px;
+    padding: 7px 30px;
+}
+button.primary {
+    background-color: $bg-color;
+    color: $primary-color;
+}
+button.secondary {
+    background-color: $primary-color;
+    color: $secondary-color;
+}

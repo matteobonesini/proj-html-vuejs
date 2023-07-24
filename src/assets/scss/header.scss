@@ -1,11 +1,12 @@
 @use './variables.scss' as *;
 /* HEADER STYLE */
 header {
+    background-image: url('../assets/img/hero-header-bakery.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+
     .header-top {
-        background-image: url('../assets/img/hero-header-bakery.jpg');
-        background-repeat: no-repeat;
-        background-position: center top;
-        background-size: cover;
         color: $primary-color;
 
         .logo {
@@ -23,12 +24,31 @@ header {
 
                 li {
 
+                    &.active::after {
+                        content: '';
+                        display: block;
+                        background-color: $primary-color;
+                        width: 100%;
+                        height: 2px;
+                        position: relative;
+                        bottom: -7px;
+                    }
+
                     a {
                         color: $primary-color;
-                        font-size: 0.8rem;
+                        font-size: 0.65rem;
                     }
                 }
             }
+        }
+    }
+
+    .header-bottom {
+        width: 500px;
+        padding: 10rem 4rem;
+
+        p {
+            color: $text-color;
         }
     }
 }

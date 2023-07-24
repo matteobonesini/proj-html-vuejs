@@ -18,15 +18,17 @@ export default {
 </script>
 
 <template>
-    <header>
-        <div class="header-top d-flex justify-content-between w-100 px-3 py-2">
+    <header class="px-3">
+        <div class="header-top d-flex justify-content-between w-100 py-2">
             <div class="logo">
                 <img src="../assets/img/avada-bakery-logo.png" alt="bakery-logo">
             </div>
 
             <div class="navbar">
                 <ul>
-                    <li v-for="(link, i) in navbarLink" :key="i" class="d-inline-block mx-2">
+                    <li v-for="(link, i) in navbarLink" :key="i" class="d-inline-block mx-2" :class="{
+                        active: i == 0
+                    }">
                         <a class="text-decoration-none text-uppercase" href="#">{{ link }}</a>
                     </li>
                     <li class="d-inline-block mx-2">
@@ -36,6 +38,16 @@ export default {
                     </li>
                 </ul>
             </div>
+        </div>
+
+        <div class="header-bottom">
+            <h6 class="subtitle text-uppercase">Fresh & tasty bakery every day</h6>
+            <h1 class="title">The Perfect Fresh Bread</h1>
+            <p>
+                Cras consequat lectus vestibulum tortor pulvinar, quis euismod nisl varius. Aliquam erat volutpat. Nullam
+                quis sagittis nibh ac nulla id orci tempor.
+            </p>
+            <button class="primary">Explore our products</button>
         </div>
     </header>
 </template>
