@@ -1,0 +1,34 @@
+@use './variables.scss' as *;
+/* HEADER STYLE */
+header {
+    .header-top {
+        background-image: url('../assets/img/hero-header-bakery.jpg');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        color: $primary-color;
+
+        .logo {
+            height: 75px;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        .navbar {
+    
+            ul {
+                list-style-type: none;
+
+                li {
+
+                    a {
+                        color: $primary-color;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
