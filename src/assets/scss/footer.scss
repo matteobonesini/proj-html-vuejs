@@ -4,25 +4,29 @@
 footer {
 
     .footer-left {
+        height: 300px;
 
-        .logo {
-            height: 60px;
+        .top {
 
-            img {
-                height: 100%;
+            .logo {
+                height: 60px;
+    
+                img {
+                    height: 100%;
+                }
             }
-        }
-
-        nav {
-            color: $primary-color;
-            margin: 35px 0 80px;
-
-            .counter {
-                background-color: $secondary-color;
+    
+            nav {
                 color: $primary-color;
-                padding: 3px 10px;
-                border-radius: 99px;
-                margin-left: 5px;
+                margin-top: 35px;
+    
+                .counter {
+                    background-color: $secondary-color;
+                    color: $primary-color;
+                    padding: 3px 10px;
+                    border-radius: 99px;
+                    margin-left: 5px;
+                }
             }
         }
         .copyright {
@@ -31,19 +35,26 @@ footer {
     }
 
     .footer-right {
+        height: 300px;
 
-        input {
-            height: 50px;
-            border-radius: 5px;
-            border: 1px solid rgb(209, 208, 208);
-            margin-right: 15px;
-            padding: 0 10px;
-            width: 40%;
+        .top {
+
+            form {
+                margin-top: 35px;
+
+                input {
+                    height: 40px;
+                    width: 60%;
+                    border-radius: 5px;
+                    border: 1px solid rgb(209, 208, 208);
+                    margin-right: 15px;
+                    padding: 0 10px;
+                }
+            }
         }
 
         nav {
             color: $primary-color;
         }
     }
-
 }
