@@ -54,4 +54,26 @@ main {
             }
         }
     }
+
+    section.corporate-and-weddings {
+        margin: 80px 0;
+
+        .image {
+            margin-top: 30px;
+
+            img {
+                width: calc(50% - 25px);
+                aspect-ratio: 1 / 1.1;
+                object-fit: cover;
+                border-radius: 5px;
+
+                &:nth-child(1) {
+                    margin-right: 25px;
+                }
+                &:nth-child(2) {
+                    margin-left: 25px;
+                }
+            }
+        }
+    }
 }

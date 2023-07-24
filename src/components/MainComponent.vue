@@ -41,6 +41,17 @@ export default {
             </div>
         </section>
 
+        <section class="corporate-and-weddings">
+            <div class="container text-center">
+                <h6 class="subtitle text-uppercase">Corporate & weddings</h6>
+                <h4 class="title">Baking Special Moments</h4>
+                <div class="image">
+                    <img src="../assets/img/corporate-bg.jpg" alt="corporate">
+                    <img src="../assets/img/wedding-bg.jpg" alt="wedding">
+                </div>
+            </div>
+        </section>
+
     </main>
 </template>
 
