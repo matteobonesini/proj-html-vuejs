@@ -3,6 +3,28 @@ export default {
     data() {
         return {
             ourProductsCarousel: true,
+            ourProductsCarouselArr: [
+                {
+                    src: 'choco-chip-cookies-600x765.jpg',
+                    title: 'Choco Chip Cookies',
+                    price: '$19.00 - $39.00',
+                },
+                {
+                    src: 'strawberry-jam-cookies-600x765.jpg',
+                    title: 'Strawberry Jam Cookies',
+                    price: '$24.00 - $62.00',
+                },
+                {
+                    src: 'cookies-with-ice-cream-600x765.jpg',
+                    title: 'Cookies with ice cream',
+                    price: '$18.00 - $34.00',
+                },
+                {
+                    src: 'home-bread-600x765.jpg',
+                    title: 'Home bread',
+                    price: '$22.00 - $46.00',
+                }
+            ],
             productPreviewCarousel: true,
             productPreviewCarouselArr: [
                 {
@@ -45,17 +67,29 @@ export default {
                     title: 'Balckberry stuffed bread',
                     price: '$22.00 - $46.00',
                 }
-            ]
+            ],
+            weddingHover: [false, false]
         }
     },
     mounted() {
-        this.changeCarouselActive();
+        this.changeCarouselActiveO();
+        this.changeCarouselActiveP();
     },
     methods: {
         getImagePath(imgPath) {
             return new URL('../assets/img/' + imgPath, import.meta.url).href;
         },
-        changeCarouselActive() {
+        changeCarouselActiveO() {
+            this.ourProductsCarousel = !this.ourProductsCarousel
+            this.ourProductsCarouselArr.map((element, i) => {
+                if (i < 2) {
+                    element.active = this.ourProductsCarousel;
+                } else {
+                    element.active = !this.ourProductsCarousel;
+                }
+            })
+        },
+        changeCarouselActiveP() {
             this.productPreviewCarousel = !this.productPreviewCarousel
             this.productPreviewCarouselArr.map((element, i) => {
                 if (i < 4) {
@@ -82,20 +116,24 @@ export default {
                 </div>
                 <div class="right">
                     <div class="carousel">
-                        <div class="control prev" @click="ourProductsCarousel = !ourProductsCarousel">
+                        <div class="control prev" @click="changeCarouselActiveO()">
                             <i class="fa-solid fa-chevron-left"></i>
                         </div>
-                        <div class="control next" @click="ourProductsCarousel = !ourProductsCarousel">
+                        <div class="control next" @click="changeCarouselActiveO()">
                             <i class="fa-solid fa-chevron-right"></i>
                         </div>
                         <div class="images">
-                            <img v-show="ourProductsCarousel" src="../assets/img/choco-chip-cookies-600x765.jpg"
-                                alt="cookies">
-                            <img v-show="ourProductsCarousel" src="../assets/img/strawberry-jam-cookies-600x765.jpg"
-                                alt="strawberry">
-                            <img v-show="!ourProductsCarousel" src="../assets/img/cookies-with-ice-cream-600x765.jpg"
-                                alt="ice-cream">
-                            <img v-show="!ourProductsCarousel" src="../assets/img/home-bread-600x765.jpg" alt="bread">
+                            <div class="image" v-for="(image, i) in ourProductsCarouselArr" :key="i"
+                                :class="image.active ? 'd-none' : 'd-inline-block'">
+                                <div class="overlay">
+                                    <h5 class="text-light text-center">
+                                        {{ image.title }}
+                                        <div>Cookies, Pastries</div>
+                                        {{ image.price }}
+                                    </h5>
+                                </div>
+                                <img class="w-100" :src="getImagePath(image.src)" :alt="image.title">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -107,8 +145,10 @@ export default {
                 <h6 class="subtitle">Corporate & weddings</h6>
                 <h3 class="title">Baking Special Moments</h3>
                 <div class="image">
-                    <img src="../assets/img/corporate-bg.jpg" alt="corporate">
-                    <img src="../assets/img/wedding-bg.jpg" alt="wedding">
+                    <img :src="weddingHover[0] ? getImagePath('corporate-hover-bg.jpg') : getImagePath('corporate-bg.jpg')"
+                        alt="corporate" @mouseenter="weddingHover[0] = true" @mouseleave="weddingHover[0] = false">
+                    <img :src="weddingHover[1] ? getImagePath('wedding-hover-bg.jpg') : getImagePath('wedding-bg.jpg')"
+                        alt="wedding" @mouseenter="weddingHover[1] = true" @mouseleave="weddingHover[1] = false">
                 </div>
             </div>
         </section>
@@ -125,16 +165,25 @@ export default {
                 </div>
                 <div class="right">
                     <div class="carousel">
-                        <div class="control prev" @click="changeCarouselActive()">
+                        <div class="control prev" @click="changeCarouselActiveP()">
                             <i class="fa-solid fa-chevron-left"></i>
                         </div>
-                        <div class="control next" @click="changeCarouselActive()">
+                        <div class="control next" @click="changeCarouselActiveP()">
                             <i class="fa-solid fa-chevron-right"></i>
                         </div>
-                        <div class="images">
-                            <div class="image text-center" v-for="(element, i) in productPreviewCarouselArr" :key="i"
+                        <div class="product-cards">
+                            <div class="product-card text-center" v-for="(element, i) in productPreviewCarouselArr" :key="i"
                                 :class="element.active ? 'd-none' : 'd-inline-block'">
-                                <img :src="getImagePath(element.src)" :alt="element.title">
+                                <div class="image">
+                                    <div class="overlay">
+                                        <h6 class="text-uppercase text-light">
+                                            <a href="#">Select Options</a>
+                                            /
+                                            <a href="#">Quick View</a>
+                                        </h6>
+                                    </div>
+                                    <img :src="getImagePath(element.src)" :alt="element.title">
+                                </div>
                                 <h5 class="title">{{ element.title }}</h5>
                                 <div class="price">{{ element.price }}</div>
                             </div>
@@ -184,9 +233,13 @@ export default {
 
                     <div class="quote d-flex flex-column justify-content-center">
                         <h6 class="subtitle">Dont just take our word for it</h6>
-                        <h2 class="title">"Finally found an alternative to the mass produced products. Somethings that
+                        <h2 class="title">
+                            <i class="fa-solid fa-quote-left"></i>
+                            Finally found an alternative to the mass produced products. Somethings that
                             incorporates real organic ingredients, nutrient dense wellness while promoting sustainability
-                            and activity."</h2>
+                            and activity.
+                            <i class="fa-solid fa-quote-right"></i>
+                        </h2>
                         <p>Rachel Cooper, Founder</p>
                     </div>
                 </div>

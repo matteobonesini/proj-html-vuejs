@@ -19,6 +19,13 @@ footer {
             nav {
                 color: $primary-color;
                 margin-top: 35px;
+
+                li {
+
+                    a {
+                        font-size: 0.8em;
+                    }
+                }
     
                 .counter {
                     background-color: $secondary-color;

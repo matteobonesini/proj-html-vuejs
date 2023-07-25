@@ -24,8 +24,8 @@ export default {
                     <img src="../assets/img/avada-bakery-logo.png" alt="bakery-logo">
                 </div>
                 <nav>
-                    <ul class="list-unstyled w-100">
-                        <li v-for="(link, i) in footerLink" :key="i" class="d-inline-block me-4">
+                    <ul class="list-unstyled w-100 d-flex justify-content-between">
+                        <li v-for="(link, i) in footerLink" :key="i" class="d-inline-block">
                             <a href="#">{{ link }}</a>
                         </li>
                         <li class="d-inline-block">
