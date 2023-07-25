@@ -75,9 +75,9 @@ export default {
         <section class="our-products">
             <div class="container d-flex">
                 <div class="left">
-                    <h6 class="subtitle text-uppercase">Our Products</h6>
-                    <h4 class="title">All our delectable pastries are backed fresh in our Kitchen very morning, and are made
-                        with all-natural, all organic ingredients.</h4>
+                    <h6 class="subtitle">Our Products</h6>
+                    <h3 class="title">All our delectable pastries are backed fresh in our Kitchen very morning, and are made
+                        with all-natural, all organic ingredients.</h3>
                     <button class="secondary">Start Shopping</button>
                 </div>
                 <div class="right">
@@ -104,8 +104,8 @@ export default {
 
         <section class="corporate-and-weddings">
             <div class="container text-center">
-                <h6 class="subtitle text-uppercase">Corporate & weddings</h6>
-                <h4 class="title">Baking Special Moments</h4>
+                <h6 class="subtitle">Corporate & weddings</h6>
+                <h3 class="title">Baking Special Moments</h3>
                 <div class="image">
                     <img src="../assets/img/corporate-bg.jpg" alt="corporate">
                     <img src="../assets/img/wedding-bg.jpg" alt="wedding">
@@ -116,7 +116,7 @@ export default {
         <section class="products-preview">
             <div class="container d-flex">
                 <div class="left text-center">
-                    <h4 class="title">Find a freshly baked product perfect for you</h4>
+                    <h3 class="title">Find a freshly baked product perfect for you</h3>
                     <p>
                         Integer a nibh vitae ex porttitor rutrum et ut velit. Etiam ac felis at leo feugiat placerat. Sed ac
                         nulla id orci tempor convallis sed.
@@ -151,7 +151,7 @@ export default {
                     <h2 class="title text-light fs-1">Tell us what you have in mind</h2>
                     <div class="order  text-light">01</div>
                     <div class="description">
-                        <h6 class="subtitle text-uppercase  text-light">Manual ingredients selection</h6>
+                        <h6 class="subtitle  text-light">Manual ingredients selection</h6>
                         <p class="text-light">Cras consequat lectus vestibulum tortor pulvinar, quis euismod nisl varius. Ut
                             eu
                             laoreeet ex.
@@ -169,7 +169,7 @@ export default {
                         <h2 class="title text-light fs-1">We Start Baking</h2>
                         <div class="order  text-light">02</div>
                         <div class="description">
-                            <h6 class="subtitle text-uppercase  text-light">Sweet & delicius</h6>
+                            <h6 class="subtitle  text-light">Sweet & delicius</h6>
                             <p class="text-light">Cras consequat lectus vestibulum tortor pulvinar, quis euismod nisl
                                 varius. Ut
                                 eu
@@ -183,7 +183,7 @@ export default {
                     </div>
 
                     <div class="quote d-flex flex-column justify-content-center">
-                        <h6 class="subtitle text-uppercase">Dont just take our word for it</h6>
+                        <h6 class="subtitle">Dont just take our word for it</h6>
                         <h2 class="title">"Finally found an alternative to the mass produced products. Somethings that
                             incorporates real organic ingredients, nutrient dense wellness while promoting sustainability
                             and activity."</h2>
@@ -196,7 +196,7 @@ export default {
                     <h2 class="title text-light fs-1">Delivered to your home</h2>
                     <div class="order  text-light">03</div>
                     <div class="description">
-                        <h6 class="subtitle text-uppercase  text-light">Baked to order $ gift wrapped</h6>
+                        <h6 class="subtitle  text-light">Baked to order $ gift wrapped</h6>
                         <p class="text-light">Cras consequat lectus vestibulum tortor pulvinar, quis euismod nisl varius. Ut
                             eu
                             laoreeet ex.
@@ -209,6 +209,52 @@ export default {
                 </div>
             </div>
         </section>
+
+        <section class="locations">
+            <div class="container text-center">
+                <h6 class="subtitle">
+                    Locations
+                </h6>
+                <h3 class="title">Visit our Bakeries</h3>
+                <div class="location-cards d-flex">
+                    <div class="new-york w-50">
+                        <img class="w-100" src="../assets/img/new-york-bk-800x530.jpg" alt="new-york">
+                        <h3 class="title">New York</h3>
+                        <div class="info d-flex justify-content-around">
+                            <div class="call-us">
+                                <h6 class="subtitle">Call us</h6>
+                                <h6 class="subtitle">1.800.458.556</h6>
+                            </div>
+                            <div class="opening">
+                                <h6 class="subtitle">Open all week</h6>
+                                <h6 class="subtitle">9:00 AM - 6:00 PM</h6>
+                            </div>
+                            <div class="map">
+                                <button class="primary">View Map</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="london w-50">
+                        <img class="w-100" src="../assets/img/london-bk-800x530.jpg" alt="london">
+                        <h3 class="title">London</h3>
+                        <div class="info d-flex justify-content-around">
+                            <div class="call-us">
+                                <h6 class="subtitle">Call us</h6>
+                                <h6 class="subtitle">1.800.458.556</h6>
+                            </div>
+                            <div class="opening">
+                                <h6 class="subtitle">Open all week</h6>
+                                <h6 class="subtitle">9:00 AM - 6:00 PM</h6>
+                            </div>
+                            <div class="map">
+                                <button class="primary">View Map</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
     </main>
 </template>
