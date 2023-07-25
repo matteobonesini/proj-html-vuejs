@@ -308,4 +308,22 @@ main {
             background-color: $card-bg-warm;
         }
     }
+
+    section.call-to-action {
+        background-image: url('../assets/img/call-to-action-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 450px;
+
+        .call-container {
+            height: 100%;
+            max-width: 992px;
+            margin: 0 auto;
+            padding: 0 20px;
+
+            .title {
+                margin: 30px 0;
+            }
+        }
+    }
 }

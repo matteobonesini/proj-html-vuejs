@@ -43,7 +43,7 @@ export default {
         </div>
         <div class="footer-right w-50 d-flex flex-column justify-content-between text-end">
             <div class="top">
-                <h4 class="title fw-bold">Subscribe to our Newsletter</h4>
+                <h3 class="title fw-bold">Subscribe to our Newsletter</h3>
                 <form action="" @submit.prevent="">
                     <input type="text" placeholder="Enter email address*">
                     <button class="secondary" type="submit">Subscribe</button>
