@@ -18,8 +18,12 @@ export default {
   <MainComponent />
 
   <FooterComponent />
+
+  <a class="go-up" href="#header">
+    <i class="fa-solid fa-chevron-up"></i>
+  </a>
 </template>
 
 <style lang="scss">
-@use './assets/scss/main.scss' as *;
+@use './assets/scss/style.scss' as *;
 </style>

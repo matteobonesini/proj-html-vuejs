@@ -9,8 +9,8 @@ main {
         .left {
             width: 35%;
 
-            h4 {
-                margin: 15px 0 35px;
+            .title {
+                margin: 25px 0 45px;
             }
         }
         
@@ -43,17 +43,15 @@ main {
                 }
 
                 .images {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    overflow: hidden;
 
                     .image {
                         position: relative;
-                        width: calc(50% - 5px);
-
-                        &:nth-child(even) {
-                            margin-left: 5px;
-                        }
-                        &:nth-child(odd) {
-                            margin-right: 5px;
-                        }
+                        width: calc(50% - 10px);
+                        flex-shrink: 0;
+                        margin-right: 20px;
 
                         &:hover .overlay {
                             display: block;
@@ -148,15 +146,16 @@ main {
                 }
 
                 .product-cards {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    overflow: hidden;
 
                     .product-card {
                         width: calc(25% - 12px);
                         vertical-align: top;
-                        position: relative;
-
-                        &:not(:nth-child(4n)) {
-                            margin-right: 16px;
-                        }
+                        flex-shrink: 0;
+                        flex-grow: 0;
+                        margin-right: 16px;
 
                         .image {
                             width: 100%;
@@ -214,7 +213,7 @@ main {
         .tell-us {
             width: 100%;
             min-height: 600px;
-            background-image: url('../assets/img/bakery-process-1.jpg');
+            background-image: url('../../assets/img/bakery-process-1.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             position: relative;
@@ -257,7 +256,7 @@ main {
             .we-start {
                 width: calc(50% - 12.5px);
                 min-height: 600px;
-                background-image: url('../assets/img/bakery-process-2.jpg');
+                background-image: url('../../assets/img/bakery-process-2.jpg');
                 background-repeat: no-repeat;
                 background-size: cover;
                 position: relative;
@@ -319,7 +318,7 @@ main {
         .delivered {
             width: 100%;
             min-height: 600px;
-            background-image: url('../assets/img/bakery-process-3.jpg');
+            background-image: url('../../assets/img/bakery-process-3.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             position: relative;
@@ -366,7 +365,7 @@ main {
         .new-york, .london {
             background-color: $card-bg-cold;
 
-            h4.title {
+            title {
                 margin: 35px 0 20px;
             }
 

@@ -45,7 +45,7 @@ export default {
             <div class="top">
                 <h3 class="title fw-bold">Subscribe to our Newsletter</h3>
                 <form action="" @submit.prevent="">
-                    <input type="text" placeholder="Enter email address*">
+                    <input type="email" placeholder="Enter email address*">
                     <button class="secondary" type="submit">Subscribe</button>
                 </form>
             </div>

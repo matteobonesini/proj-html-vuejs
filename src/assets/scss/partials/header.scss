@@ -5,9 +5,11 @@ header {
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
+    height: 100vh;
 
     .header-top {
         color: $primary-color;
+        padding: 5px 0;
 
         .logo {
             height: 75px;
@@ -45,6 +47,11 @@ header {
 
     .header-bottom {
         width: 500px;
+        height: calc(100% - 85px);
         padding: 10rem 4rem;
+
+        h1 {
+            font-size: 3em;
+        }
     }
 }
