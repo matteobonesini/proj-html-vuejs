@@ -1,7 +1,10 @@
 <script>
+import { store } from '../../store';
+
 export default {
     data() {
         return {
+            store,
             productPreviewCarousel: true,
             productPreviewCarouselArr: [
                 {
@@ -52,9 +55,6 @@ export default {
         }
     },
     methods: {
-        getImagePath(imgPath) {
-            return new URL('../../assets/img/' + imgPath, import.meta.url).href;
-        },
         changeCarouselActiveP() {
             this.productPreviewCarousel = !this.productPreviewCarousel
             if (this.productPreviewCarousel) {
@@ -97,7 +97,7 @@ export default {
                                         <a href="#">Quick View</a>
                                     </h6>
                                 </div>
-                                <img :src="getImagePath(element.src)" :alt="element.title">
+                                <img :src="store.getImagePath(element.src)" :alt="element.title">
                             </div>
                             <h5 class="title">{{ element.title }}</h5>
                             <div class="price">{{ element.price }}</div>

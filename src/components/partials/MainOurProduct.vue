@@ -1,7 +1,10 @@
 <script>
+import { store } from '../../store';
+
 export default {
     data() {
         return {
+            store,
             ourProductsCarousel: true,
             ourProductsCarouselArr: [
                 {
@@ -32,9 +35,6 @@ export default {
         }
     },
     methods: {
-        getImagePath(imgPath) {
-            return new URL('../../assets/img/' + imgPath, import.meta.url).href;
-        },
         changeCarouselActiveO() {
             this.ourProductsCarousel = !this.ourProductsCarousel;
             if (this.ourProductsCarousel) {
@@ -42,7 +42,7 @@ export default {
             } else {
                 this.carouselSlide.transform = 'translateX(calc(-200% - 40px))'
             }
-        },
+        }
     }
 }
 </script>
@@ -74,7 +74,7 @@ export default {
                                     {{ image.price }}
                                 </h5>
                             </div>
-                            <img class="w-100" :src="getImagePath(image.src)" :alt="image.title">
+                            <img class="w-100" :src="store.getImagePath(image.src)" :alt="image.title">
                         </div>
                     </div>
                 </div>

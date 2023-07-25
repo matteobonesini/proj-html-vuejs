@@ -1,14 +1,12 @@
 <script>
+import { store } from '../../store';
+
 export default {
     data() {
         return {
+            store,
             weddingHover: [false, false],
         }
-    },
-    methods: {
-        getImagePath(imgPath) {
-            return new URL('../../assets/img/' + imgPath, import.meta.url).href;
-        },
     }
 }
 </script>
@@ -19,9 +17,9 @@ export default {
             <h6 class="subtitle">Corporate & weddings</h6>
             <h3 class="title">Baking Special Moments</h3>
             <div class="image">
-                <img :src="weddingHover[0] ? getImagePath('corporate-hover-bg.jpg') : getImagePath('corporate-bg.jpg')"
+                <img :src="weddingHover[0] ? store.getImagePath('corporate-hover-bg.jpg') : store.getImagePath('corporate-bg.jpg')"
                     alt="corporate" @mouseenter="weddingHover[0] = true" @mouseleave="weddingHover[0] = false">
-                <img :src="weddingHover[1] ? getImagePath('wedding-hover-bg.jpg') : getImagePath('wedding-bg.jpg')"
+                <img :src="weddingHover[1] ? store.getImagePath('wedding-hover-bg.jpg') : store.getImagePath('wedding-bg.jpg')"
                     alt="wedding" @mouseenter="weddingHover[1] = true" @mouseleave="weddingHover[1] = false">
             </div>
         </div>
