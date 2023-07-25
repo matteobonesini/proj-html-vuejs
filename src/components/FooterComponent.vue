@@ -2,7 +2,7 @@
 export default {
     data() {
         return {
-            footerLink: [
+            footerLinks: [
                 'Shop',
                 'About',
                 'Gallery',
@@ -10,6 +10,12 @@ export default {
                 'Journal',
                 'Contact',
                 'Orders'
+            ],
+            socialClass: [
+                'fa-instagram',
+                'fa-twitter',
+                'fa-facebook-f',
+                'fa-pinterest-p'
             ]
         }
     }
@@ -25,7 +31,7 @@ export default {
                 </div>
                 <nav>
                     <ul class="list-unstyled w-100 d-flex justify-content-between">
-                        <li v-for="(link, i) in footerLink" :key="i" class="d-inline-block">
+                        <li v-for="(link, i) in footerLinks" :key="i" class="d-inline-block">
                             <a href="#">{{ link }}</a>
                         </li>
                         <li class="d-inline-block">
@@ -51,24 +57,9 @@ export default {
             </div>
             <nav class="list-unstyled">
                 <ul class="m-0">
-                    <li class="d-inline-block me-4">
+                    <li class="d-inline-block me-4" v-for="singleClass in socialClass">
                         <a href="#">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li class="d-inline-block me-4">
-                        <a href="#">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="d-inline-block me-4">
-                        <a href="#">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li class="d-inline-block me-4">
-                        <a href="#">
-                            <i class="fa-brands fa-pinterest-p"></i>
+                            <i class="fa-brands" :class="singleClass"></i>
                         </a>
                     </li>
                 </ul>
