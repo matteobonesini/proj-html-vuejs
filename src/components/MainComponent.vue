@@ -16,11 +16,6 @@ export default {
         MainLocations,
         MainSocial,
         MainCallToAction
-    },
-    methods: {
-        getImagePath(imgPath) {
-            return new URL('../assets/img/' + imgPath, import.meta.url).href;
-        }
     }
 }
 </script>

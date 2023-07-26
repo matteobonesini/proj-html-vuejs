@@ -5,7 +5,7 @@ export default {
     data() {
         return {
             store,
-            ourProductsCarousel: true,
+            ourProductsCarousel: true, // variable to manage the functionality of the carousel
             ourProductsCarouselArr: [
                 {
                     src: 'choco-chip-cookies-600x765.jpg',
@@ -27,15 +27,16 @@ export default {
                     title: 'Home bread',
                     price: '$22.00 - $46.00',
                 }
-            ],
+            ], // database of carousel
             carouselSlide: {
                 transform: 'translateX(0)',
                 transition: 'all 1s'
-            },
+            }, // style of carousel, to create a transition
         }
     },
     methods: {
-        changeCarouselActiveO() {
+        // function to slide the carousel
+        changeCarouselActive() {
             this.ourProductsCarousel = !this.ourProductsCarousel;
             if (this.ourProductsCarousel) {
                 this.carouselSlide.transform = 'translateX(0)'
@@ -58,10 +59,10 @@ export default {
             </div>
             <div class="right">
                 <div class="carousel">
-                    <div class="control prev" @click="changeCarouselActiveO()">
+                    <div class="control prev" @click="changeCarouselActive()">
                         <i class="fa-solid fa-chevron-left"></i>
                     </div>
-                    <div class="control next" @click="changeCarouselActiveO()">
+                    <div class="control next" @click="changeCarouselActive()">
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
                     <div class="images">

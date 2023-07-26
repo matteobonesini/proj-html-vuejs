@@ -3,11 +3,12 @@
 /* MAIN COMPONENT */
 main {
 
+    // OUR PRODUCTS SECTION
     section.our-products {
-        margin: 80px 0;
+        margin: 100px 0;
 
         .left {
-            width: 35%;
+            width: 32%;
 
             .title {
                 margin: 25px 0 45px;
@@ -15,7 +16,7 @@ main {
         }
         
         .right {
-            width: 65%;
+            width: 68%;
             padding-left: 50px;
 
             .carousel {
@@ -58,7 +59,7 @@ main {
                         }
 
                         .overlay {
-                            background-color: #a691b29f;
+                            background-color: #585858d4;
                             position: absolute;
                             top: 0;
                             left: 0;
@@ -85,21 +86,24 @@ main {
         }
     }
 
+    // CORPORATE AND WEDDINGS SECTION
     section.corporate-and-weddings {
-        margin: 80px 0;
+        margin-bottom: 100px;
 
         .title {
             margin: 25px 0 35px;
         }
 
-        .image {
+        .images {
             margin-top: 30px;
 
-            img {
+            .image {
+                display: inline-block;
+                position: relative;
                 width: calc(50% - 25px);
                 aspect-ratio: 1 / 1.05;
-                object-fit: cover;
                 border-radius: 5px;
+                overflow: hidden;
 
                 &:nth-child(1) {
                     margin-right: 25px;
@@ -107,10 +111,30 @@ main {
                 &:nth-child(2) {
                     margin-left: 25px;
                 }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+    
+                .hover {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
         }
     }
 
+    // PRODUCTS PREVIEW SECTION
     section.products-preview {
         
         .left {
@@ -171,7 +195,7 @@ main {
                                 left: 0;
                                 width: 100%;
                                 height: 100%;
-                                background-color: #a691b29f;
+                                background-color: #585858d4;
                                 display: none;
 
                                 h6 {
@@ -207,8 +231,9 @@ main {
         }
     }
 
+    // BAKERY PROCESS SECTION
     section.bakery-process {
-        margin: 80px 0;
+        margin: 100px 0;
 
         .tell-us {
             width: 100%;
@@ -231,6 +256,7 @@ main {
                 position: absolute;
                 top: 50px;
                 left: 50px;
+                width: 30rem;
             }
             
             .order {
@@ -356,6 +382,7 @@ main {
         }
     }
 
+    // LOCATIONS SECTION
     section.locations {
 
         .title {
@@ -382,8 +409,9 @@ main {
         }
     }
 
+    // SOCIAL SECTION
     section.social {
-        margin: 80px 0;
+        margin: 100px 0;
 
         .col-6 > * {
             background-color: $secondary-color;
@@ -397,6 +425,7 @@ main {
         }
     }
 
+    // CALL TO ACTION SECTION
     section.call-to-action {
         background-image: url('../assets/img/call-to-action-bg.jpg');
         background-repeat: no-repeat;

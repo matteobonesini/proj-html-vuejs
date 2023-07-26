@@ -10,13 +10,13 @@ export default {
                 'Journal',
                 'Contact',
                 'Orders'
-            ],
+            ], // database of footer-left link
             socialClass: [
                 'fa-instagram',
                 'fa-twitter',
                 'fa-facebook-f',
                 'fa-pinterest-p'
-            ]
+            ] // database of footer-right link
         }
     }
 }
@@ -50,8 +50,8 @@ export default {
         <div class="footer-right w-50 d-flex flex-column justify-content-between text-end">
             <div class="top">
                 <h3 class="title fw-bold">Subscribe to our Newsletter</h3>
-                <form action="" @submit.prevent="">
-                    <input type="email" placeholder="Enter email address*">
+                <form method="GET" action="" @submit.prevent="">
+                    <input name="email" type="email" placeholder="Enter email address*">
                     <button class="secondary" type="submit">Subscribe</button>
                 </form>
             </div>

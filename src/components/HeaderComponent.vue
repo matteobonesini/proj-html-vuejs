@@ -11,15 +11,15 @@ export default {
                 'Journal',
                 'Contacts',
                 'My Account'
-            ],
-            activeLink: 0
+            ], // database of header-top link
+            activeLink: 0 // store which link is active
         }
     }
 }
 </script>
 
 <template>
-    <header class="px-3" id="header">
+    <header id="header">
         <div class="header-top d-flex justify-content-between w-100">
             <div class="logo">
                 <a href="/">
@@ -43,14 +43,19 @@ export default {
             </div>
         </div>
 
-        <div class="header-bottom d-flex flex-column justify-content-center align-items-start">
-            <h6 class="subtitle text-uppercase">Fresh & tasty bakery every day</h6>
-            <h1 class="title">The Perfect Fresh Bread</h1>
-            <p>
-                Cras consequat lectus vestibulum tortor pulvinar, quis euismod nisl varius. Aliquam erat volutpat. Nullam
-                quis sagittis nibh ac nulla id orci tempor.
-            </p>
-            <button class="primary">Explore our products</button>
+        <div class="header-bottom">
+            <div class="container d-flex flex-column justify-content-center align-items-start">
+                <div class="width-500">
+                    <h6 class="subtitle text-uppercase">Fresh & tasty bakery every day</h6>
+                    <h1 class="title">The Perfect Fresh Bread</h1>
+                    <p>
+                        Cras consequat lectus vestibulum tortor pulvinar, quis euismod nisl varius. Aliquam erat volutpat.
+                        Nullam
+                        quis sagittis nibh ac nulla id orci tempor.
+                    </p>
+                    <button class="primary">Explore our products</button>
+                </div>
+            </div>
         </div>
     </header>
 </template>

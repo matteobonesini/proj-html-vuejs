@@ -19,6 +19,7 @@ export default {
 
   <FooterComponent />
 
+  <!-- button leading back to the header -->
   <a class="go-up" href="#header">
     <i class="fa-solid fa-chevron-up"></i>
   </a>

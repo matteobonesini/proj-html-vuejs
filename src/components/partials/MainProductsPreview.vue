@@ -5,7 +5,7 @@ export default {
     data() {
         return {
             store,
-            productPreviewCarousel: true,
+            productPreviewCarousel: true, // variable to manage the functionality of the carousel
             productPreviewCarouselArr: [
                 {
                     src: 'choco-chip-cookies-600x765.jpg',
@@ -47,15 +47,16 @@ export default {
                     title: 'Balckberry stuffed bread',
                     price: '$22.00 - $46.00',
                 }
-            ],
+            ], // database of carousel
             carouselSlideProducts: {
                 transform: 'translateX(0)',
                 transition: 'all 1s'
-            },
+            }, // style of carousel, to create a transition
         }
     },
     methods: {
-        changeCarouselActiveP() {
+        // function to slide the carousel
+        changeCarouselActive() {
             this.productPreviewCarousel = !this.productPreviewCarousel
             if (this.productPreviewCarousel) {
                 this.carouselSlideProducts.transform = 'translateX(0)'
@@ -70,7 +71,7 @@ export default {
 <template>
     <section class="products-preview">
         <div class="container d-flex">
-            <div class="left text-center">
+            <div class="left text-center d-flex flex-column justify-content-center align-items-center">
                 <h3 class="title">Find a freshly baked product perfect for you</h3>
                 <p>
                     Integer a nibh vitae ex porttitor rutrum et ut velit. Etiam ac felis at leo feugiat placerat. Sed ac
@@ -80,10 +81,10 @@ export default {
             </div>
             <div class="right">
                 <div class="carousel">
-                    <div class="control prev" @click="changeCarouselActiveP()">
+                    <div class="control prev" @click="changeCarouselActive()">
                         <i class="fa-solid fa-chevron-left"></i>
                     </div>
-                    <div class="control next" @click="changeCarouselActiveP()">
+                    <div class="control next" @click="changeCarouselActive()">
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
                     <div class="product-cards">
